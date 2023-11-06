@@ -36,12 +36,14 @@
 
   <hr />
 
-  <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <!-- Include the fragment to display search results -->
-    <div th:each="job : ${jobs}">
-        <div th:replace="list-jobs :: job-table"></div>
-    </div>
+<!--   TODO #4 - Loop over the search results to display all job fields. -->
+<!--     Include the fragment to display search results-->
 
+<!--    <div th:each="job : ${jobs}">-->
+<!--        <div th:replace="fragments :: job-table"></div>-->
+<!--    </div>-->
+    <div th:replace="~{fragments :: page-header}"></div>
+    <div th:replace="~{fragments :: job-table}"></div>
 
 </div>
 
