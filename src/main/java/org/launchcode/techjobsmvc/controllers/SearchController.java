@@ -33,7 +33,7 @@ public class SearchController {
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm) {
         ArrayList<Job> jobs;
 
-        if (searchType.equals("all") || searchTerm.isEmpty()) {
+        if (searchTerm.equals("all") || searchTerm.isEmpty()) {
             // If the user enters "all" in the search box or leaves it empty, show all jobs
             jobs = JobData.findAll();
         } else {
